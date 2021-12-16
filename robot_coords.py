@@ -2,7 +2,7 @@ import re
 import numpy as np
 
 # content = json.load(codecs.open(jsonpath, 'r', 'utf-8-sig'))
-# 感覺不需要轉移矩陣，應該x軸跟y軸分開算
+
 matrix_left = np.array([[0.484,  -1.02],
                         [-0.0187, 0.096]])
 matrix_right = np.array([[-0.571,  0.0154],
@@ -41,7 +41,7 @@ def get_coords(txtpath: str):
             pass
 
         line = f.readline()
-        
+
     return coords_list
 
 
@@ -157,7 +157,7 @@ def main():
     robot2_script = generate_robot2_script(coords_list)
 
     # save scripts
-    dir_path = 'C:\\users\\PMC\\...'
+    dir_path = 'C:\\users\\me\\blablabla'
     with open(f'{dir_path}\\robot1.script', 'w') as f:
         f.write(robot1_script)
 
